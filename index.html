@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="icon" href="card.png">
+    <title>My Profile Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('best.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .profile-card {
+            background-image: url('flower.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            box-shadow: 2px 4px 8px rgba(0, 0.1, 0.1, 0.1);
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+        .profile-card img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .profile-card h2 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        .profile-card p {
+            font-size: 14px;
+            color: #333;
+        }
+        .profile-card .location,
+        .profile-card .email,
+        .profile-card .social-links,
+        .profile-card .current-time {
+            margin: 10px 0;
+        }
+        .profile-card .social-links a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #0073b1;
+        }
+        .current-time{
+            font-size: large;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div><img src="picture2.jpg" alt="Profile Picture" data-testid="profilePicture"></div>
+        <h2 data-testid="fullName"><b>AYOKANMI ADEJOLA</b></h2>
+        <h4 data-testid="jobTitle">Front-End Developer</h4>
+        <p data-testid="shortBio">I am a dedicated Front-end Developer with a strong foundation in HTML, CSS, and JavaScript. With a keen eye for design and a passion for creating seamless user experiences, I strive to build responsive and accessible web applications. My goal is to continuously improve my skills and contribute to innovative projects.</p>
+        <div class="location" data-testid="currentLocation">Lagos State, Nigeria</div>
+        <div class="email" data-testid="emailAddress">adejolaayokanmi90@gmail.com</div>
+        <div class="social-links" data-testid="socialLinks">
+            <a href="https://linkedin.com/in/ayokanmiadejola"><i class="bi bi-linkedin" style="font-size: x-large; margin-right: 15px;"></i></a>
+            <a href="https://github.com/Ayokanmi-Adejola"><i class="bi bi-github" style="font-size: x-large; background-color: purple; color: #fff;"></i></a>
+            <a href="https://twitter.com/AyoAdejola100"><i class="bi bi-twitter" style="font-size: x-large; margin-left: 15px;"></i></a>
+        </div>
+        <div class="current-time" data-testid="currentTimeUTC"></div>
+        </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const utcTime = now.toUTCString();
+            document.querySelector('[data-testid="currentTimeUTC"]').textContent = `${utcTime}`;
+        }
+        updateTime();
+    </script>
+</body>
+</html>
