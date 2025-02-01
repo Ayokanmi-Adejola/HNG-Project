@@ -1,0 +1,1 @@
+Building a comprehensive solution to streamline user interactions and enhance digital experiences as part of the HNG internship program. Utilizing HTML, CSS, and Javascript to design and develop a scalable, user-friendly, and efficient application. Focusing on delivering high-quality code, testing, and deployment to ensure a seamless user experience.
